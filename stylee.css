@@ -17,7 +17,13 @@
     width: max-content;
     animation: scroll 10s linear infinite; /* Adjust duration to control speed */
     }
-
+    .overlay {
+    position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+    height: 100%; width: 100%; opacity: 0;
+    transition: .5s ease; background-color: rgba(0,0,0,0.5);
+    color: white; display: flex; align-items: center; justify-content: center;
+    }
+    .marquee-container:hover .overlay { opacity: 1; }
     .marquee-track img {
     width: 1000px;
     height: 400px;
