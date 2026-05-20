@@ -5,31 +5,34 @@
         color: #1f2937;
     }
     .marquee-container {
-    overflow: hidden; /* Hide the parts outside the container */
-    white-space: nowrap; /* Keep images in one line */
-    width: 100%;
+    width: 1000px;
+    height: 200px;
+    overflow: hidden; /* Hides the overflowing track */
+    position: relative;
+    white-space: nowrap;
     }
 
     .marquee-track {
     display: flex;
-    width: max-content; /* Ensure container expands to fit all images */
-    animation: scroll 15s linear infinite; /* Adjust time for speed */
+    width: max-content;
+    animation: scroll 10s linear infinite; /* Adjust duration to control speed */
     }
 
     .marquee-track img {
-    height: 200px; /* Set your desired image height */
-    margin: 0 10px; /* Optional spacing between images */
+    width: 1000px;
+    height: 200px;
+    object-fit: cover; /* Ensures the image fits the bounds without distorting */
     }
 
     @keyframes scroll {
-    from {
+    0% {
         transform: translateX(0);
     }
-    to {
-        /* Translate by -50% because the track contains two identical halves */
-        transform: translateX(-50%);
+    100% {
+        transform: translateX(-50%); /* Slides exactly half the track width for a seamless gapless loop */
     }
     }
+
 
     /* Optional: Pause on hover */
     .marquee-container:hover .marquee-track {
