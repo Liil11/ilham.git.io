@@ -4,6 +4,11 @@
         background: #f4f6fb;
         color: #1f2937;
     }
+    .container {
+        position: relative;
+        overflow:relative;
+        white-space: nowrap;
+    }
     .marquee-container {
     width: 1000px;
     height: 400px;
@@ -15,7 +20,7 @@
     .marquee-track {
     display: flex;
     width: max-content;
-    animation: scroll 10s linear infinite; /* Adjust duration to control speed */
+    animation: scroll 20s linear infinite; /* Adjust duration to control speed */
     }
     .overlay {
     position: absolute; top: 0; bottom: 0; left: 0; right: 0;
@@ -23,10 +28,10 @@
     transition: .5s ease; background-color: rgba(0,0,0,0.5);
     color: white; display: flex; align-items: center; justify-content: center;
     }
+    .container:hover .overlay { opacity: 1;background-color: salmon; }
     .marquee-container:hover .overlay { opacity: 1; }
     .marquee-track img {
-    width: 1000px;
-    height: 400px;
+    width: max-content;
     object-fit: cover; /* Ensures the image fits the bounds without distorting */
     }
 
@@ -77,6 +82,9 @@
         color: #ffffff;
         text-decoration: none;
         border-radius: 8px;
+    }
+    #special:hover{
+        background: salmon;
     }
     .features {
         display: grid;
