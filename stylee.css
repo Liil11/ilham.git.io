@@ -32,6 +32,7 @@
     .marquee-container:hover .overlay { opacity: 1; }
     .marquee-track img {
     width: max-content;
+    height: 100%;
     object-fit: cover; 
     overflow: hidden;/* Ensures the image fits the bounds without distorting */
     }
