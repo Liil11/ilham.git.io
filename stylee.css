@@ -4,6 +4,35 @@
         background: #f4f6fb;
         color: #1f2937;
     }
+    .marquee-container {
+    width: 1000px;
+    height: 400px;
+    overflow: hidden; /* Hides the overflowing track */
+    position: relative;
+    white-space: nowrap;
+    }
+
+    .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 10s linear infinite; /* Adjust duration to control speed */
+    }
+
+    .marquee-track img {
+    width: 1000px;
+    height: 400px;
+    object-fit: cover; /* Ensures the image fits the bounds without distorting */
+    }
+
+    @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Slides exactly half the track width for a seamless gapless loop */
+    }
+    }
+
     header {
         padding: 24px 32px;
         display: flex;
